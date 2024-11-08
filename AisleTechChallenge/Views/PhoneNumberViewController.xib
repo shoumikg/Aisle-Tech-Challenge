@@ -15,6 +15,7 @@
                 <outlet property="countdownText" destination="5Hp-mj-wOw" id="uDC-is-2Kz"/>
                 <outlet property="countryCodeField" destination="PtC-KY-PPe" id="tod-Pt-CtA"/>
                 <outlet property="heading" destination="GKB-68-qGY" id="b2N-dZ-zsH"/>
+                <outlet property="otpField" destination="XcU-7n-dB3" id="NUc-0C-bX1"/>
                 <outlet property="phoneNumberField" destination="DsU-f6-IbK" id="d5x-ZG-u1i"/>
                 <outlet property="subHeading" destination="Jzg-SB-606" id="X16-mZ-GmF"/>
                 <outlet property="subHeadingIcon" destination="ERv-d8-rWe" id="KQD-FQ-cRd"/>
