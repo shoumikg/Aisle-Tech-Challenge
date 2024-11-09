@@ -90,7 +90,9 @@ class PhoneNumberViewController: UIViewController {
     private var state: State = .phoneNumber {
         didSet {
             switch state {
-            case .otp: showOtpScreen()
+            case .otp:
+                showOtpScreen()
+                startCountdown()
             case .phoneNumber: showPhoneNumberScreen()
             }
         }
@@ -144,6 +146,39 @@ class PhoneNumberViewController: UIViewController {
         subHeadingIcon.isHidden = true
     }
     
+    private var timeLeftForOTP: Int = 59 {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                self.countdownText.text = String(format: "00:%02d", self.timeLeftForOTP)
+            }
+        }
+    }
+
+    private var countdownTimer: Timer?
+
+    private func startCountdown() {
+        // Stop any existing countdown before starting a new one
+        countdownTimer?.invalidate()
+        timeLeftForOTP = 59
+        
+        countdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0,
+                                              repeats: true) { [weak self] timer in
+            guard let self else {
+                timer.invalidate()
+                return
+            }
+            
+            if self.timeLeftForOTP > 0 {
+                self.timeLeftForOTP -= 1
+            } else {
+                timer.invalidate()
+                state = .phoneNumber
+                otp = ""
+            }
+        }
+    }
+    
     @objc func clickedEditIcon(tapGestureRecognizer: UITapGestureRecognizer) {
         state = .phoneNumber
         otp = ""
@@ -175,6 +210,7 @@ class PhoneNumberViewController: UIViewController {
                     case .success(let notesViewModel):
                         self.dismiss(animated: true) { [weak self] in
                             guard let self else { return }
+                            timeLeftForOTP = 0
                             self.delegate?.loadNotesScreen(with: notesViewModel)
                         }
                     case .failure(_):
@@ -193,6 +229,10 @@ class PhoneNumberViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         countryCodeField.becomeFirstResponder()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        countdownTimer?.invalidate()
     }
 }
 
