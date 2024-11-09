@@ -13,10 +13,13 @@
             <connections>
                 <outlet property="continueButton" destination="hsT-Wb-tKf" id="Za1-TJ-mDh"/>
                 <outlet property="countdownText" destination="5Hp-mj-wOw" id="uDC-is-2Kz"/>
-                <outlet property="countryCodeField" destination="PtC-KY-PPe" id="tod-Pt-CtA"/>
+                <outlet property="countryCodeField" destination="PtC-KY-PPe" id="tRz-Ht-se8"/>
+                <outlet property="countryCodeView" destination="kXe-6U-WTH" id="Za6-AY-PLd"/>
                 <outlet property="heading" destination="GKB-68-qGY" id="b2N-dZ-zsH"/>
-                <outlet property="otpField" destination="XcU-7n-dB3" id="NUc-0C-bX1"/>
-                <outlet property="phoneNumberField" destination="DsU-f6-IbK" id="d5x-ZG-u1i"/>
+                <outlet property="otpField" destination="XcU-7n-dB3" id="bhM-Ag-Gyc"/>
+                <outlet property="otpView" destination="SPe-Y4-f8A" id="PNa-as-tKW"/>
+                <outlet property="phoneNumberField" destination="DsU-f6-IbK" id="nys-6k-ocq"/>
+                <outlet property="phoneNumberView" destination="Swp-Ip-ayQ" id="S4c-71-fak"/>
                 <outlet property="subHeading" destination="Jzg-SB-606" id="X16-mZ-GmF"/>
                 <outlet property="subHeadingIcon" destination="ERv-d8-rWe" id="KQD-FQ-cRd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

@@ -27,8 +27,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         /// 3. Create a view hierarchy programmatically
         let viewController = NotesViewController()
         //let navigation = UINavigationController(rootViewController: viewController)
-        viewController.tabBarItem = UITabBarItem(title: "Notes", image: nil, tag: 0)
-        tabBar.viewControllers = [viewController]
+        viewController.tabBarItem = UITabBarItem(title: "Notes", image: UIImage(named: "NotesTabIcon"), tag: 1)
+        
+        let vc1 = DeafultViewController()
+        vc1.tabBarItem = UITabBarItem(title: "Discover", image: UIImage(named: "DiscoverTabIcon"), tag: 0)
+        
+        let vc3 = DeafultViewController()
+        vc3.tabBarItem = UITabBarItem(title: "Matches", image: UIImage(named: "MatchesTabIcon"), tag: 2)
+        
+        let vc4 = DeafultViewController()
+        vc4.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.fill"), tag: 3)
+        
+        tabBar.viewControllers = [vc1, viewController, vc3, vc4]
+        tabBar.selectedIndex = 1
         
         /// 4. Set the root view controller of the window with your view controller
         window.rootViewController = tabBar

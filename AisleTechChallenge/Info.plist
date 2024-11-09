@@ -5,7 +5,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>InterVariable.ttf</string>
-		<string>Gilroy-Medium.ttf</string>
+		<string>Gilroy-ExtraBold.ttf</string>
+		<string>Gilroy-SemiBold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

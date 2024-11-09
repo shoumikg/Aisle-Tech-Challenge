@@ -7,26 +7,26 @@
 
 import Foundation
 
-struct PhoneNumberRequest {
+struct PhoneNumberRequest: Codable {
     let number: String
 }
 
-struct PhoneNumberResponse {
-    let status: String
+struct PhoneNumberResponse: Codable {
+    let status: Bool
 }
 
-struct OTPRequest {
+struct OTPRequest: Codable {
     let number: String
     let otp: String
 }
 
-struct OTPResponse {
+struct OTPResponse: Codable {
     let token: String
 }
 
-struct ProfileListRequest {}
+struct ProfileListRequest: Codable {}
 
-struct ProfileListResponse {
+struct ProfileListResponse: Codable {
     let invites: Invites
     let likes: Likes
 }

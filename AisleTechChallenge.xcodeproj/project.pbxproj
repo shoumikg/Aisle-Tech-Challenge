@@ -9,19 +9,15 @@
 /* Begin PBXBuildFile section */
 		920A13D32CDDD90A007CB523 /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A13D12CDDD90A007CB523 /* NotesTableViewCell.swift */; };
 		920A13D42CDDD90A007CB523 /* NotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920A13D22CDDD90A007CB523 /* NotesTableViewCell.xib */; };
-		920A13EA2CDDF4AC007CB523 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A13D62CDDF4AC007CB523 /* Gilroy-Medium.ttf */; };
-		920A13EB2CDDF4AC007CB523 /* Gilroy-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A13D72CDDF4AC007CB523 /* Gilroy-Black.ttf */; };
-		920A13EE2CDDF4AC007CB523 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A13DA2CDDF4AC007CB523 /* Gilroy-Heavy.ttf */; };
 		920A13F12CDDF4AC007CB523 /* Gilroy-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A13DD2CDDF4AC007CB523 /* Gilroy-ExtraBold.ttf */; };
-		920A13F22CDDF4AC007CB523 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A13DE2CDDF4AC007CB523 /* Gilroy-Regular.ttf */; };
-		920A13F32CDDF4AC007CB523 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A13DF2CDDF4AC007CB523 /* Gilroy-Light.ttf */; };
 		920A13F52CDDF4AC007CB523 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A13E12CDDF4AC007CB523 /* Gilroy-SemiBold.ttf */; };
-		920A13F62CDDF4AC007CB523 /* Gilroy-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A13E22CDDF4AC007CB523 /* Gilroy-Thin.ttf */; };
-		920A13F72CDDF4AC007CB523 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A13E32CDDF4AC007CB523 /* Gilroy-Bold.ttf */; };
-		920A13FA2CDDF4AC007CB523 /* Gilroy-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A13E62CDDF4AC007CB523 /* Gilroy-UltraLight.ttf */; };
 		920A14012CDDF4F5007CB523 /* InterVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920A14002CDDF4F5007CB523 /* InterVariable.ttf */; };
 		920A14062CDE5654007CB523 /* AisleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A14052CDE5654007CB523 /* AisleModels.swift */; };
 		920A14092CDE7474007CB523 /* CodableHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A14082CDE7474007CB523 /* CodableHelpers.swift */; };
+		920A140D2CDE82C9007CB523 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A140C2CDE82C9007CB523 /* NetworkManager.swift */; };
+		920A14102CDF156F007CB523 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920A140F2CDF156F007CB523 /* NotesViewModel.swift */; };
+		92264B1D2CDF8F1600B1D5D2 /* DeafultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92264B1B2CDF8F1600B1D5D2 /* DeafultViewController.swift */; };
+		92264B1E2CDF8F1600B1D5D2 /* DeafultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92264B1C2CDF8F1600B1D5D2 /* DeafultViewController.xib */; };
 		92EB872B2CDCCAC9004840E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB872A2CDCCAC9004840E1 /* AppDelegate.swift */; };
 		92EB872D2CDCCAC9004840E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB872C2CDCCAC9004840E1 /* SceneDelegate.swift */; };
 		92EB87342CDCCACA004840E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92EB87332CDCCACA004840E1 /* Assets.xcassets */; };
@@ -46,19 +42,15 @@
 /* Begin PBXFileReference section */
 		920A13D12CDDD90A007CB523 /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 		920A13D22CDDD90A007CB523 /* NotesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesTableViewCell.xib; sourceTree = "<group>"; };
-		920A13D62CDDF4AC007CB523 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
-		920A13D72CDDF4AC007CB523 /* Gilroy-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Black.ttf"; sourceTree = "<group>"; };
-		920A13DA2CDDF4AC007CB523 /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
 		920A13DD2CDDF4AC007CB523 /* Gilroy-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.ttf"; sourceTree = "<group>"; };
-		920A13DE2CDDF4AC007CB523 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
-		920A13DF2CDDF4AC007CB523 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
 		920A13E12CDDF4AC007CB523 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
-		920A13E22CDDF4AC007CB523 /* Gilroy-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.ttf"; sourceTree = "<group>"; };
-		920A13E32CDDF4AC007CB523 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
-		920A13E62CDDF4AC007CB523 /* Gilroy-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLight.ttf"; sourceTree = "<group>"; };
 		920A14002CDDF4F5007CB523 /* InterVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = InterVariable.ttf; sourceTree = "<group>"; };
 		920A14052CDE5654007CB523 /* AisleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AisleModels.swift; sourceTree = "<group>"; };
 		920A14082CDE7474007CB523 /* CodableHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelpers.swift; sourceTree = "<group>"; };
+		920A140C2CDE82C9007CB523 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		920A140F2CDF156F007CB523 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		92264B1B2CDF8F1600B1D5D2 /* DeafultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeafultViewController.swift; sourceTree = "<group>"; };
+		92264B1C2CDF8F1600B1D5D2 /* DeafultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeafultViewController.xib; sourceTree = "<group>"; };
 		92EB87272CDCCAC9004840E1 /* AisleTechChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AisleTechChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92EB872A2CDCCAC9004840E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92EB872C2CDCCAC9004840E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,16 +95,8 @@
 		920A13FE2CDDF4CD007CB523 /* Gilroy */ = {
 			isa = PBXGroup;
 			children = (
-				920A13D72CDDF4AC007CB523 /* Gilroy-Black.ttf */,
-				920A13E32CDDF4AC007CB523 /* Gilroy-Bold.ttf */,
 				920A13DD2CDDF4AC007CB523 /* Gilroy-ExtraBold.ttf */,
-				920A13DA2CDDF4AC007CB523 /* Gilroy-Heavy.ttf */,
-				920A13DF2CDDF4AC007CB523 /* Gilroy-Light.ttf */,
-				920A13D62CDDF4AC007CB523 /* Gilroy-Medium.ttf */,
-				920A13DE2CDDF4AC007CB523 /* Gilroy-Regular.ttf */,
 				920A13E12CDDF4AC007CB523 /* Gilroy-SemiBold.ttf */,
-				920A13E22CDDF4AC007CB523 /* Gilroy-Thin.ttf */,
-				920A13E62CDDF4AC007CB523 /* Gilroy-UltraLight.ttf */,
 			);
 			path = Gilroy;
 			sourceTree = "<group>";
@@ -129,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				920A14052CDE5654007CB523 /* AisleModels.swift */,
+				920A140F2CDF156F007CB523 /* NotesViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,6 +124,14 @@
 				920A14082CDE7474007CB523 /* CodableHelpers.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		920A140B2CDE82A4007CB523 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				920A140C2CDE82C9007CB523 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		92EB871E2CDCCAC9004840E1 = {
@@ -162,6 +155,7 @@
 		92EB87292CDCCAC9004840E1 /* AisleTechChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				920A140B2CDE82A4007CB523 /* Network */,
 				920A14072CDE745C007CB523 /* Utils */,
 				920A14042CDE5621007CB523 /* Models */,
 				920A13D52CDDF496007CB523 /* Fonts */,
@@ -200,6 +194,8 @@
 				92EB87652CDD34B1004840E1 /* NotesViewController.xib */,
 				920A13D12CDDD90A007CB523 /* NotesTableViewCell.swift */,
 				920A13D22CDDD90A007CB523 /* NotesTableViewCell.xib */,
+				92264B1B2CDF8F1600B1D5D2 /* DeafultViewController.swift */,
+				92264B1C2CDF8F1600B1D5D2 /* DeafultViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,22 +281,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92264B1E2CDF8F1600B1D5D2 /* DeafultViewController.xib in Resources */,
 				920A13D42CDDD90A007CB523 /* NotesTableViewCell.xib in Resources */,
-				920A13EA2CDDF4AC007CB523 /* Gilroy-Medium.ttf in Resources */,
-				920A13F32CDDF4AC007CB523 /* Gilroy-Light.ttf in Resources */,
 				92EB875E2CDD2443004840E1 /* PhoneNumberViewController.xib in Resources */,
-				920A13EE2CDDF4AC007CB523 /* Gilroy-Heavy.ttf in Resources */,
 				920A14012CDDF4F5007CB523 /* InterVariable.ttf in Resources */,
-				920A13F22CDDF4AC007CB523 /* Gilroy-Regular.ttf in Resources */,
 				92EB87342CDCCACA004840E1 /* Assets.xcassets in Resources */,
 				920A13F12CDDF4AC007CB523 /* Gilroy-ExtraBold.ttf in Resources */,
 				920A13F52CDDF4AC007CB523 /* Gilroy-SemiBold.ttf in Resources */,
 				92EB87372CDCCACA004840E1 /* Base in Resources */,
-				920A13FA2CDDF4AC007CB523 /* Gilroy-UltraLight.ttf in Resources */,
-				920A13EB2CDDF4AC007CB523 /* Gilroy-Black.ttf in Resources */,
 				92EB87662CDD34B1004840E1 /* NotesViewController.xib in Resources */,
-				920A13F62CDDF4AC007CB523 /* Gilroy-Thin.ttf in Resources */,
-				920A13F72CDDF4AC007CB523 /* Gilroy-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,13 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92264B1D2CDF8F1600B1D5D2 /* DeafultViewController.swift in Sources */,
 				920A14092CDE7474007CB523 /* CodableHelpers.swift in Sources */,
 				92EB875F2CDD2443004840E1 /* PhoneNumberViewController.swift in Sources */,
 				92EB87672CDD34B1004840E1 /* NotesViewController.swift in Sources */,
 				920A14062CDE5654007CB523 /* AisleModels.swift in Sources */,
+				920A140D2CDE82C9007CB523 /* NetworkManager.swift in Sources */,
 				920A13D32CDDD90A007CB523 /* NotesTableViewCell.swift in Sources */,
 				92EB872B2CDCCAC9004840E1 /* AppDelegate.swift in Sources */,
 				92EB872D2CDCCAC9004840E1 /* SceneDelegate.swift in Sources */,
+				920A14102CDF156F007CB523 /* NotesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
