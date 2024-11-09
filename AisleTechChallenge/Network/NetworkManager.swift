@@ -79,8 +79,8 @@ final class NetworkManager {
                                  completion: @escaping (Result<NotesViewModel, Error>) -> ()) {
         var request = URLRequest(url: URL(string: Constants.notesURL)!)
         request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
-        let task = client.dataTask(with: request) { [weak self] data, _, error in
-            guard let self, error == nil else {
+        let _ = client.dataTask(with: request) { data, _, error in
+            guard error == nil else {
                 completion(.failure(NSError(domain: error.debugDescription, code: -1)))
                 return
             }

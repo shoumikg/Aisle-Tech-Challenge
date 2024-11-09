@@ -14,12 +14,12 @@
                 <outlet property="continueButton" destination="hsT-Wb-tKf" id="Za1-TJ-mDh"/>
                 <outlet property="countdownText" destination="5Hp-mj-wOw" id="uDC-is-2Kz"/>
                 <outlet property="countryCodeField" destination="PtC-KY-PPe" id="tRz-Ht-se8"/>
-                <outlet property="countryCodeView" destination="kXe-6U-WTH" id="Za6-AY-PLd"/>
+                <outlet property="countryCodeView" destination="kXe-6U-WTH" id="3RR-Wu-L0n"/>
                 <outlet property="heading" destination="GKB-68-qGY" id="b2N-dZ-zsH"/>
                 <outlet property="otpField" destination="XcU-7n-dB3" id="bhM-Ag-Gyc"/>
-                <outlet property="otpView" destination="SPe-Y4-f8A" id="PNa-as-tKW"/>
+                <outlet property="otpView" destination="SPe-Y4-f8A" id="STK-Ii-SFp"/>
                 <outlet property="phoneNumberField" destination="DsU-f6-IbK" id="nys-6k-ocq"/>
-                <outlet property="phoneNumberView" destination="Swp-Ip-ayQ" id="S4c-71-fak"/>
+                <outlet property="phoneNumberView" destination="Swp-Ip-ayQ" id="PK3-OU-IdF"/>
                 <outlet property="subHeading" destination="Jzg-SB-606" id="X16-mZ-GmF"/>
                 <outlet property="subHeadingIcon" destination="ERv-d8-rWe" id="KQD-FQ-cRd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -128,7 +128,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ERv-d8-rWe">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ERv-d8-rWe">
                     <rect key="frame" x="107" y="142.66666666666666" width="14" height="14"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="14" id="8yD-gJ-1Lz"/>

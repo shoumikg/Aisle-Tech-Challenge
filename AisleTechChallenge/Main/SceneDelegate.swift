@@ -40,6 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         tabBar.viewControllers = [vc1, viewController, vc3, vc4]
         tabBar.selectedIndex = 1
+        tabBar.tabBar.tintColor = .black
         
         /// 4. Set the root view controller of the window with your view controller
         window.rootViewController = tabBar

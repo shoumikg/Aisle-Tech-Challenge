@@ -26,7 +26,15 @@ class PhoneNumberViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var subHeadingIcon: UIImageView!
+    @IBOutlet weak var subHeadingIcon: UIImageView! {
+        didSet {
+            subHeadingIcon.image = UIImage(named: "EditIcon")
+            subHeadingIcon.isUserInteractionEnabled = true
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(clickedEditIcon(tapGestureRecognizer:)))
+            subHeadingIcon.addGestureRecognizer(tapGestureRecognizer)
+            subHeadingIcon.isHidden = true
+        }
+    }
     
     @IBOutlet weak var countryCodeView: UIView!
     @IBOutlet weak var countryCodeField: UITextField! {
@@ -79,7 +87,14 @@ class PhoneNumberViewController: UIViewController {
         case otp
     }
     
-    private var state: State = .phoneNumber
+    private var state: State = .phoneNumber {
+        didSet {
+            switch state {
+            case .otp: showOtpScreen()
+            case .phoneNumber: showPhoneNumberScreen()
+            }
+        }
+    }
     weak var delegate: LoginScreenDelegateProtocol?
     
     init(delegate: LoginScreenDelegateProtocol? = nil) {
@@ -95,35 +110,58 @@ class PhoneNumberViewController: UIViewController {
         return true
     }
     
-    @IBAction func clickedButton(_ sender: Any) {
+    private func showPhoneNumberScreen() {
+        heading.text = "Enter Your \nPhone Number"
+        subHeading.text = "Get OTP"
+        subHeadingIcon.isHidden = true
+        phoneNumberView.isHidden = false
+        countryCodeView.isHidden = false
+        otpView.isHidden = true
+        continueButton.isEnabled = true
+        phoneNumberField.isEnabled = true
+        countryCodeField.isEnabled = true
+        countdownText.isHidden = true
+    }
+    
+    private func showOtpScreen() {
+        heading.text = "Enter The \nOTP"
+        subHeading.text = countryCode + " " + phoneNumber
+        subHeadingIcon.isHidden = false
+        phoneNumberView.isHidden = true
+        countryCodeView.isHidden = true
+        otpView.isHidden = false
+        otpField.isEnabled = true
+        otpField.becomeFirstResponder()
+        continueButton.isEnabled = true
+        countdownText.isHidden = false
+    }
+    
+    private func showLoadingScreen() {
         continueButton.isEnabled = false
         phoneNumberField.isEnabled = false
         countryCodeField.isEnabled = false
         otpField.isEnabled = false
+        subHeadingIcon.isHidden = true
+    }
+    
+    @objc func clickedEditIcon(tapGestureRecognizer: UITapGestureRecognizer) {
+        state = .phoneNumber
+        otp = ""
+    }
+    
+    @IBAction func clickedButton(_ sender: Any) {
+        showLoadingScreen()
         if state == .phoneNumber {
             NetworkManager.instance.requestOTP(countryCode: countryCode,
                                                phoneNumber: phoneNumber) { [weak self] otpGenerated in
                 DispatchQueue.main.async { [weak self] in
                     guard let self else { return }
                     if otpGenerated {
-                        heading.text = "Enter The \nOTP"
-                        subHeading.text = countryCode + " " + phoneNumber
-                        subHeadingIcon.isHidden = false
-                        subHeadingIcon.image = UIImage(named: "EditIcon")
-                        phoneNumberView.isHidden = true
-                        countryCodeView.isHidden = true
-                        otpView.isHidden = false
-                        otpField.isEnabled = true
-                        otpField.becomeFirstResponder()
-                        continueButton.isEnabled = true
-                        countdownText.isHidden = false
                         state = .otp
                     } else {
-                        //phoneNumberField.text = phoneNumber
-                        //countryCodeField.text = countryCode
-                        continueButton.isEnabled = true
-                        phoneNumberField.isEnabled = true
-                        countryCodeField.isEnabled = true
+                        phoneNumberField.shake(count: 2, for: 0.15)
+                        countryCodeField.shake(count: 2, for: 0.15)
+                        showPhoneNumberScreen()
                     }
                 }
             }
@@ -139,9 +177,9 @@ class PhoneNumberViewController: UIViewController {
                             guard let self else { return }
                             self.delegate?.loadNotesScreen(with: notesViewModel)
                         }
-                    case .failure(let failure):
-                        continueButton.isEnabled = true
-                        otpField.isEnabled = true
+                    case .failure(_):
+                        showOtpScreen()
+                        otpField.shake(count: 2, for: 0.15)
                     }
                 }
             }

@@ -22,13 +22,16 @@ class NotesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var inviteImage: UIImageView! {
         didSet {
-            inviteImage.layer.cornerRadius = 5
+            inviteImage.layer.cornerRadius = 15
+            inviteImage.image = UIImage(systemName: "network")
+            inviteImage.tintColor = .gray
         }
     }
     @IBOutlet weak var inviteTitle: UILabel! {
         didSet {
             inviteTitle.font = UIFont(name: "Gilroy-ExtraBold", size: 22)
             inviteTitle.textColor = .white
+            inviteTitle.isHidden = true
         }
     }
     @IBOutlet weak var inviteSubtitle: UILabel! {
@@ -36,6 +39,7 @@ class NotesTableViewCell: UITableViewCell {
             inviteSubtitle.text = "Tap to review your notes"
             inviteSubtitle.font = UIFont(name: "Gilroy-SemiBold", size: 15)
             inviteSubtitle.textColor = .white
+            inviteSubtitle.isHidden = true
         }
     }
     
@@ -47,7 +51,6 @@ class NotesTableViewCell: UITableViewCell {
     @IBOutlet weak var upgradeDescription: UILabel! {
         didSet {
             upgradeDescription.font = UIFont(name: "Gilroy-SemiBold", size: 15)
-            upgradeDescription.textColor = .gray
             
         }
     }
@@ -55,7 +58,9 @@ class NotesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var firstLikeImage: UIImageView! {
         didSet {
-            firstLikeImage.layer.cornerRadius = 5
+            firstLikeImage.layer.cornerRadius = 10
+            firstLikeImage.image = UIImage(systemName: "network")
+            firstLikeImage.tintColor = .gray
         }
     }
     @IBOutlet weak var firstLikeTitlte: UILabel! {
@@ -67,7 +72,9 @@ class NotesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var secondLikeImage: UIImageView! {
         didSet {
-            secondLikeImage.layer.cornerRadius = 5
+            secondLikeImage.layer.cornerRadius = 10
+            secondLikeImage.image = UIImage(systemName: "network")
+            secondLikeImage.tintColor = .gray
         }
     }
     @IBOutlet weak var secondLikeTitle: UILabel! {
@@ -91,7 +98,7 @@ class NotesTableViewCell: UITableViewCell {
     
     func loadWithData(viewModel: NotesViewModel) {
         if !viewModel.invites.isEmpty {
-            inviteTitle.text = (viewModel.invites.first?.name ?? "") + ", " + (viewModel.invites.first?.dob ?? "")
+            inviteTitle.text = (viewModel.invites.first?.name ?? "") + ", " + (viewModel.invites.first?.dob?.ageFromDob ?? "")
             
             DispatchQueue.global().async { [weak self] in
                 guard let self else { return }
@@ -102,6 +109,8 @@ class NotesTableViewCell: UITableViewCell {
                         DispatchQueue.main.async { [weak self] in
                             guard let self else { return }
                             inviteImage.image = UIImage(data: data)
+                            inviteTitle.isHidden = false
+                            inviteSubtitle.isHidden = false
                         }
                     }
                 }.resume()
@@ -124,6 +133,7 @@ class NotesTableViewCell: UITableViewCell {
                             let blurEffect = UIBlurEffect(style: .dark)
                             let blurredEffectView = UIVisualEffectView(effect: blurEffect)
                             blurredEffectView.frame = firstLikeImage.bounds
+                            blurredEffectView.layer.cornerRadius = 10
                             firstLikeImage.addSubview(blurredEffectView)
                         }
                     }
@@ -139,6 +149,7 @@ class NotesTableViewCell: UITableViewCell {
                             let blurEffect = UIBlurEffect(style: .dark)
                             let blurredEffectView = UIVisualEffectView(effect: blurEffect)
                             blurredEffectView.frame = secondLikeImage.bounds
+                            blurredEffectView.layer.cornerRadius = 10
                             secondLikeImage.addSubview(blurredEffectView)
                         }
                     }

@@ -14,6 +14,7 @@ class NotesViewController: UIViewController {
             tableView.dataSource = self
             tableView.register(UINib(nibName: "NotesTableViewCell", bundle: nil), forCellReuseIdentifier: "NotesTableViewCell")
             tableView.showsVerticalScrollIndicator = false
+            tableView.separatorStyle = .none
         }
     }
     

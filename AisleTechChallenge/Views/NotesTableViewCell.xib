@@ -47,18 +47,18 @@
                         <string key="text">Premium members can
 view all their likes at once</string>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lv7-Ba-T0D">
-                        <rect key="frame" x="447" y="680.66666666666663" width="96" height="40"/>
+                        <rect key="frame" x="430" y="670.66666666666663" width="113" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="96" id="6RT-uw-MRi"/>
-                            <constraint firstAttribute="height" constant="40" id="XSE-NI-f6d"/>
+                            <constraint firstAttribute="width" constant="113" id="6RT-uw-MRi"/>
+                            <constraint firstAttribute="height" constant="50" id="XSE-NI-f6d"/>
                         </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Continue">
-                            <backgroundConfiguration key="background" cornerRadius="20">
+                        <buttonConfiguration key="configuration" style="plain" title="Upgrade">
+                            <backgroundConfiguration key="background" cornerRadius="25">
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.79607843140000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                             </backgroundConfiguration>
                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
@@ -68,14 +68,13 @@ view all their likes at once</string>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jHH-sP-Ken">
                         <rect key="frame" x="20" y="739.33333333333337" width="523" height="255"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEA-e7-isg">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grO-qe-Wbo">
                                 <rect key="frame" x="0.0" y="0.0" width="257.66666666666669" height="255"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6i-hm-i7z">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0r-vw-1fQ">
                                         <rect key="frame" x="0.0" y="0.0" width="257.66666666666669" height="255"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHD-sI-U6g">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXY-z9-O76">
                                         <rect key="frame" x="15.000000000000004" y="224.66666666666663" width="41.333333333333343" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -84,18 +83,21 @@ view all their likes at once</string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="EHD-sI-U6g" firstAttribute="leading" secondItem="JEA-e7-isg" secondAttribute="leading" constant="15" id="4pb-nz-jKY"/>
-                                    <constraint firstAttribute="bottom" secondItem="EHD-sI-U6g" secondAttribute="bottom" constant="10" id="f5j-cG-8EL"/>
+                                    <constraint firstItem="gXY-z9-O76" firstAttribute="leading" secondItem="grO-qe-Wbo" secondAttribute="leading" constant="15" id="CyC-DF-RNc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y0r-vw-1fQ" secondAttribute="trailing" id="D7g-eb-n1k"/>
+                                    <constraint firstItem="Y0r-vw-1fQ" firstAttribute="top" secondItem="grO-qe-Wbo" secondAttribute="top" id="QPt-n6-j28"/>
+                                    <constraint firstAttribute="bottom" secondItem="gXY-z9-O76" secondAttribute="bottom" constant="10" id="Te8-Dv-NfT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y0r-vw-1fQ" secondAttribute="bottom" id="ur0-oG-hBa"/>
+                                    <constraint firstItem="Y0r-vw-1fQ" firstAttribute="leading" secondItem="grO-qe-Wbo" secondAttribute="leading" id="vZF-fB-xdg"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cj-9W-rHN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJE-lv-Qr2">
                                 <rect key="frame" x="265.66666666666674" y="0.0" width="257.33333333333326" height="255"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQ7-qf-xQd">
-                                        <rect key="frame" x="0.0" y="0.0" width="257.33333333333326" height="255"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eFf-D7-UHZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="257.33333333333331" height="255"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gL-db-bzr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ss7-mf-eD0">
                                         <rect key="frame" x="15.000000000000004" y="224.66666666666663" width="41.333333333333343" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -104,8 +106,12 @@ view all their likes at once</string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="8gL-db-bzr" secondAttribute="bottom" constant="10" id="aVL-4B-26F"/>
-                                    <constraint firstItem="8gL-db-bzr" firstAttribute="leading" secondItem="7cj-9W-rHN" secondAttribute="leading" constant="15" id="oz0-Eh-mEI"/>
+                                    <constraint firstAttribute="bottom" secondItem="eFf-D7-UHZ" secondAttribute="bottom" id="OEy-bn-3M6"/>
+                                    <constraint firstItem="eFf-D7-UHZ" firstAttribute="leading" secondItem="yJE-lv-Qr2" secondAttribute="leading" id="UIW-uv-R8C"/>
+                                    <constraint firstItem="eFf-D7-UHZ" firstAttribute="top" secondItem="yJE-lv-Qr2" secondAttribute="top" id="VKo-IL-2jW"/>
+                                    <constraint firstItem="Ss7-mf-eD0" firstAttribute="leading" secondItem="yJE-lv-Qr2" secondAttribute="leading" constant="15" id="cKH-SR-zdU"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ss7-mf-eD0" secondAttribute="bottom" constant="10" id="hHN-eg-Rx4"/>
+                                    <constraint firstAttribute="trailing" secondItem="eFf-D7-UHZ" secondAttribute="trailing" id="wx5-3b-2Ps"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -152,13 +158,13 @@ view all their likes at once</string>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="firstLikeImage" destination="B6i-hm-i7z" id="DX6-BA-HCk"/>
-                <outlet property="firstLikeTitlte" destination="EHD-sI-U6g" id="wp6-Zs-ufZ"/>
+                <outlet property="firstLikeImage" destination="Y0r-vw-1fQ" id="FdM-A4-Gnk"/>
+                <outlet property="firstLikeTitlte" destination="gXY-z9-O76" id="6ZY-tE-EYM"/>
                 <outlet property="inviteImage" destination="YQ8-fO-gSy" id="xVY-mr-hlP"/>
                 <outlet property="inviteSubtitle" destination="YKy-CZ-NCC" id="rMn-Q9-dP5"/>
                 <outlet property="inviteTitle" destination="JED-Ki-n4c" id="9vg-c0-isV"/>
-                <outlet property="secondLikeImage" destination="KQ7-qf-xQd" id="vmT-5d-yVh"/>
-                <outlet property="secondLikeTitle" destination="8gL-db-bzr" id="hQr-cU-pJ8"/>
+                <outlet property="secondLikeImage" destination="eFf-D7-UHZ" id="BBG-S6-KlD"/>
+                <outlet property="secondLikeTitle" destination="Ss7-mf-eD0" id="xOm-c2-Idm"/>
                 <outlet property="subtitle" destination="WyO-kq-XV2" id="xCg-gn-C38"/>
                 <outlet property="title" destination="fyO-6k-XNQ" id="wZA-n1-USy"/>
                 <outlet property="upgradeButton" destination="Lv7-Ba-T0D" id="MwW-Eb-EfO"/>
